@@ -35,7 +35,6 @@ const WhyUs = () => {
                         trigger: TextRef.current,
                         start: "top 8%",
                         end: "bottom 70%",
-                        markers: true,
                         scrub: true,
                         pin: ".pinned-container",
                         anticipatePin: 1,
