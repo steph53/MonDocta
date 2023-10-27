@@ -11,7 +11,6 @@ import Container from "@modules/home/components/Container";
 const WhyUs = () => {
     const TextRef = useRef<HTMLDivElement>(null);
     const HeadingRef = useRef<HTMLDivElement>(null);
-    if(TextRef){
         useLayoutEffect(()=>{
             gsap.registerPlugin(ScrollTrigger);
             var timeline = gsap.context(() => {
@@ -47,7 +46,7 @@ const WhyUs = () => {
             });
             return() => timeline.revert();
         },[]);
-    }
+    
     return ( 
             <div>
                 <Spacer height="l" />
@@ -75,6 +74,6 @@ const WhyUs = () => {
                 </div>
             </div>
     );
-}
+};
 
 export default WhyUs;
