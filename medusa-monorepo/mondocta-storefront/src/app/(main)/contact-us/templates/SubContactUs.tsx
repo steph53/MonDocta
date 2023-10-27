@@ -2,7 +2,7 @@
 
 import ContactForm from "@modules/contact-us";
 import Lottie from "lottie-react";
-import yogaAnim from "/lottie/yoga.json";
+import yogaAnim from "../../../../../lottie/yoga.json";
 
 
 

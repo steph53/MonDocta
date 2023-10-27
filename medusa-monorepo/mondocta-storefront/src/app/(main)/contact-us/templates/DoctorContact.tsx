@@ -2,7 +2,7 @@
 
 import ContactForm from "@modules/contact-us";
 import Lottie from "lottie-react";
-import healthAnim from "/lottie/health.json";
+import healthAnim from "../../../../../lottie/health.json";
 
 
 
