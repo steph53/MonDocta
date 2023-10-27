@@ -14,7 +14,7 @@ const OrderDetailDefault = () => {
         Start developing with Medusa
       </Heading>
       <Text size="small">
-        Medusa is a completely customizable commerce solution. We've curated
+        Medusa is a completely customizable commerce solution. We&apos;ve curated
         some essential guides to kickstart your development with Medusa.
       </Text>
       <div className="grid grid-cols-3 gap-4 mt-6 pb-6 mb-6 border-b border-ui-border-base border-solid auto-rows-fr">

@@ -58,7 +58,7 @@ export const ProductProvider = ({
     setOptions(optionObj)
   }, [product])
 
-  // memoized record of the product's variants
+  // memoized record of the product&apos;s variants
   const variantRecord = useMemo(() => {
     const map: Record<string, Record<string, string>> = {}
 
@@ -106,7 +106,7 @@ export const ProductProvider = ({
     } else if (cart?.region) {
       return findCheapestPrice(variants, cart.region)
     } else {
-      // if no variant is selected, or we couldn't find a price for the region/currency
+      // if no variant is selected, or we couldn&apos;t find a price for the region/currency
       return "N/A"
     }
   }, [variant, variants, cart])

@@ -267,7 +267,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   }
 
   /**
-   * Method that validates if the cart's region matches the shipping address's region. If not, it will update the cart region.
+   * Method that validates if the cart&apos;s region matches the shipping address&apos;s region. If not, it will update the cart region.
    */
   const validateRegion = (countryCode: string) => {
     if (regions && cart) {

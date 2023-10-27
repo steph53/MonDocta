@@ -33,9 +33,9 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
   return (
     <div>
       <div className="flex flex-col gap-2">
-        <Text>On this page, you can view your product's details and edit them.</Text>
+        <Text>On this page, you can view your product&apos;s details and edit them.</Text>
         <Text>
-          You can preview your product using Medusa's Store APIs. You can copy any
+          You can preview your product using Medusa&apos;s Store APIs. You can copy any
           of the following code snippets to try it out.
         </Text>
       </div>
