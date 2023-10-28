@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import WhyUsPoint from "./components/WhyUsPoint";
@@ -10,21 +10,10 @@ import Container from "@modules/home/components/Container";
 
 const WhyUs = () => {
     const TextRef = useRef<HTMLDivElement>(null);
-    const HeadingRef = useRef<HTMLDivElement>(null);
-        useLayoutEffect(()=>{
+        useEffect(()=>{
             gsap.registerPlugin(ScrollTrigger);
             var timeline = gsap.context(() => {
-            /*let tl2 = gsap.fromTo(TextRef.current,{opacity: 0}, {
-                opacity: 1,
-                scrollTrigger: {
-                    trigger: TextRef.current,
-                    start: "top 10%",
-                    end: "top 40%",
-                    scrub: true,
-                    invalidateOnRefresh: true,
-                }
-            });*/
-            let tl3 = gsap.fromTo(TextRef.current,
+                let tl3 = gsap.fromTo(TextRef.current,
                 {
                     y:0,
                 },{
@@ -38,9 +27,13 @@ const WhyUs = () => {
                         pin: ".pinned-container",
                         anticipatePin: 1,
                         invalidateOnRefresh: true,
-                        snap: 0.3,
+                        snap: {
+                            snapTo: [0,0.3,1],
+                            duration: 1.3,
+                            delay: 0.3,
+                            ease: "power1.inOut"
+                        },
                         refreshPriority: 2,
-                        
                     }
                 });
             });
@@ -58,7 +51,7 @@ const WhyUs = () => {
                 </Container>
                 <Spacer />
                 <div>
-                    <div  className="pinned-container bg-[#badaf7] flex flex-col m-10 gap-28  rounded-xl h-[90vh] overflow-hidden">                        
+                    <div  className="pinned-container bg-[#badaf7] flex flex-col sm:m-10 mx-5 gap-28  rounded-xl h-[90vh] overflow-hidden">                        
                         <div ref={TextRef} className="flex flex-col h-[180vh]  ">
                             <div className=" section h-[90vh]">
                                 <WhyUsPoint title="Combating Healthcare Access Inequalities" description="The MonDocta association was created with a noble aim: to tackle the glaring disparities in access to healthcare that affect many regions. We know that unequal access to medical services leads to higher mortality rates, particularly in disadvantaged communities." number={"01"}/>

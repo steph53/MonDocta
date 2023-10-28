@@ -1,6 +1,6 @@
 "use client";
 import {gsap} from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import "@fortawesome/fontawesome-free/css/fontawesome.css";
 import "@fortawesome/fontawesome-free/css/brands.css";
@@ -13,7 +13,7 @@ const FeatureCarousel = () => {
     gsap.registerPlugin(ScrollTrigger);
     const carouselRef = useRef<HTMLDivElement>(null);
     const container = useRef<HTMLDivElement>(null);
-    useLayoutEffect(()=>{
+    useEffect(()=>{
       gsap.registerPlugin(ScrollTrigger);
       if(carouselRef.current ){
         const blue = gsap.context(() => {

@@ -23,42 +23,80 @@ const FeatureRight: React.FC<FeatureRightProps> = ({
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         if(imageRef2.current ){
-          var tl = gsap.timeline({});
-          tl.fromTo(imageRef2.current,{
-            opacity: 0,
-          },{
-              opacity: 1,
-              duration: 1,
-              scrollTrigger: {
-                trigger: imageRef2.current,
-                start: "top 80%",
-                end: "top 40%",
-                once: true,
-                scrub: true,
-                invalidateOnRefresh: true,
-            }
-          });
-          tl.fromTo(imageRef2.current,{
-            y: -220,
-          },{
-              y: -150,
-              scrollTrigger: {
-                trigger: imageRef2.current,
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-                invalidateOnRefresh: true,
-            }
-          });
-          tl.fromTo(textRef.current,{ 
-              opacity: 0
-          },{ 
-              opacity:1, x: 50, 
-              duration: 0.5
-          });
+            const blue = gsap.context(() => {
+                let mm = gsap.matchMedia();
+                mm.add("(min-width: 1024px)", () => {  
+                    var tl = gsap.timeline({});
+                    tl.fromTo(imageRef2.current,{
+                        opacity: 0,
+                    },{
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: imageRef2.current,
+                            start: "top 70%",
+                            end: "top 40%",
+                            once: true,
+                            scrub: true,
+                            invalidateOnRefresh: true,
+                        }
+                    });
+                    tl.fromTo(imageRef2.current,{
+                        y: -220,
+                    },{
+                        y: -150,
+                        scrollTrigger: {
+                            trigger: imageRef2.current,
+                            start: "top top",
+                            end: "bottom top",
+                            scrub: true,
+                            invalidateOnRefresh: true,
+                        }
+                    });
+                    tl.fromTo(textRef.current,{ 
+                        opacity: 0
+                    },{ 
+                        opacity:1, x: 50, 
+                        duration: 0.5
+                    });
+                });
+                mm.add("(max-width: 1023px)", () => {  
+                    var tl = gsap.timeline({});
+                    tl.fromTo(imageRef2.current,{
+                        opacity: 0,
+                    },{
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: imageRef2.current,
+                            start: "top 80%",
+                            end: "top 60%",
+                            once: true,
+                            scrub: true,
+                            invalidateOnRefresh: true,
+                        }
+                    });
+                    tl.to(imageRef2.current,{
+                        y: -50,
+                        scrollTrigger: {
+                            trigger: imageRef2.current,
+                            start: "top 70%",
+                            end: "bottom top",
+                            scrub: true,
+                            invalidateOnRefresh: true,
+                        }
+                    });
+                    tl.fromTo(textRef.current,{ 
+                        opacity: 0
+                    },{ 
+                        opacity:1, x: 50, 
+                        duration: 0.5
+                    });
+                });
+            });
+            return() => blue.revert();
         }
     },[]);
-
     return ( 
         <div className="h-[100vh] w-full flex flex-col lg:flex-row">
             <div className=" hidden w-[90vw] lg:w-[50vw] lg:h-[80%] lg:flex lg:flex-col m-auto lg:m-0 items-center">
@@ -74,9 +112,9 @@ const FeatureRight: React.FC<FeatureRightProps> = ({
                     </div>
                 </div>
             </div>
-            <div className="w-[100vw] lg:w-[50vw] h-[50vh] lg:h-[80%]">
+            <div className="w-[100vw] lg:w-[50vw] h-[40vh] lg:h-[80%]">
                 <div className=" h-full w-[95%] lg:ml-[5%] rounded-xl overflow-hidden m-auto">
-                    <div ref={imageRef2} className={`${image== "pregnant"? "pregnant-feature": "children-feature"} image-feature w-[120%] bg-cover h-[130%] opacity-0 -translate-y-[220px]`}></div>
+                    <div ref={imageRef2} className={`${image== "pregnant"? "pregnant-feature": "children-feature"} image-feature w-[120%] bg-cover h-[130%] opacity-0 lg:-translate-y-[220px]`}></div>
                 </div>
             </div>
             <div className=" lg:hidden w-[90vw] lg:w-[50vw] lg:h-[80%] flex flex-col m-auto lg:m-0 items-center">
