@@ -10,7 +10,7 @@ import Hero from "../hero";
 import WhyUs from "../why-us";
 
 
-const mainComponent = () => {
+const MainComponent = () => {
     gsap.registerPlugin(ScrollTrigger);
     const navGradientRef = useRef<HTMLDivElement>(null);
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -83,4 +83,4 @@ const mainComponent = () => {
      );
 }
  
-export default mainComponent;
+export default MainComponent;
