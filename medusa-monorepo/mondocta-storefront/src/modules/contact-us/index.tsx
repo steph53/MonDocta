@@ -1,6 +1,5 @@
 "use-client";
 
-import Spacer from '@modules/common/components/spacer';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
 interface FormData {
@@ -37,11 +36,11 @@ function ContactForm() {
   };
 
   return (
-    <div className=''>
+    <div className='w-[100vw] lg:w-full'>
       <h2 className='text-4xl mb-10'>Contact Us</h2>
       <form onSubmit={handleSubmit} className='gap-6 flex flex-col m-auto  justify-end'>
-        <div className='flex flex-row gap-8'>  
-            <div>
+        <div className='flex flex-col lg:flex-row gap-8 justify-between'>  
+            <div className='lg:w-[47%]'>
                 <input
                     type="text"
                     placeholder='First Name'
@@ -49,11 +48,11 @@ function ContactForm() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className='border-b border-[#0a78b4] outline-none'
+                    className='border-b border-[#0a78b4] outline-none w-full'
                 />
             </div>
 
-            <div>
+            <div  className='lg:w-[47%]'>
                 <input
                     type="text"
                     placeholder='Last Name'
@@ -61,7 +60,7 @@ function ContactForm() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className='border-b border-[#0a78b4] outline-none'
+                    className='border-b border-[#0a78b4] outline-none w-full'
                 />
             </div>
         </div>

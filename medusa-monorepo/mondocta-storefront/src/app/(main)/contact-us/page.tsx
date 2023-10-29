@@ -24,11 +24,11 @@ const ContactUs = () => {
    
     if(joinUsDoctors){
          bodyContent = ( 
-            <div>
-                <div className="flex flex-row gap-5 px-20 justify-center overflow-scroll">
-                    <ButtonPill text="Join Us" color="blue" onClick={() => { setOthersFalse(); setJoinUs(true); } } state={joinUs}/>
+            <div className="overflow-hidden">
+                <div className="flex flex-row gap-2 sm:gap-5 lg:px-20 overflow-x-auto  flex-nowrap whitespace-nowrap">
+                    <ButtonPill  text="Join Us" className="ml-auto" color="blue" onClick={() => { setOthersFalse(); setJoinUs(true); } } state={joinUs}/>
                     <ButtonPill text="Join Us - Doctors" color="blue" onClick={() => { setOthersFalse(); setJoinUsDoctors(true); } } state={joinUsDoctors}/>
-                    <ButtonPill text="Contact Us" color="blue" onClick={() => { setOthersFalse(); setContactUs(true); } } state={contactUs}/>
+                    <ButtonPill text="Contact Us" className="mr-auto" color="blue" onClick={() => { setOthersFalse(); setContactUs(true); } } state={contactUs}/>
                 </div>
                 <DoctorContact/>
             </div> 
@@ -36,11 +36,11 @@ const ContactUs = () => {
     }
     else if(joinUs){
        bodyContent = ( 
-            <div>
-                <div className="flex flex-row gap-5 px-20 justify-center overflow-scroll">
-                    <ButtonPill text="Join Us" color="blue" onClick={() => { setOthersFalse; setJoinUs(true); } } state={joinUs}/>
+            <div className="overflow-hidden w-[100vw]">
+                <div className="flex flex-row gap-2 sm:gap-5  lg:px-20 overflow-x-auto">
+                    <ButtonPill text="Join Us" className="ml-auto" color="blue" onClick={() => { setOthersFalse; setJoinUs(true); } } state={joinUs}/>
                     <ButtonPill text="Join Us - Doctors" color="blue" onClick={() => { setOthersFalse; setJoinUsDoctors(true); } } state={joinUsDoctors}/>
-                    <ButtonPill text="Contact Us" color="blue" onClick={() => { setOthersFalse; setContactUs(true); } } state={contactUs}/>
+                    <ButtonPill text="Contact Us" className="mr-auto" color="blue" onClick={() => { setOthersFalse; setContactUs(true); } } state={contactUs}/>
                 </div>
                 <JoinContact/>
             </div> 
@@ -48,11 +48,11 @@ const ContactUs = () => {
     }
     else if(contactUs){
        bodyContent = ( 
-            <div>
-                <div className="flex flex-row gap-5 px-20 justify-center overflow-scroll">
-                    <ButtonPill text="Join Us" color="blue" onClick={() => { setOthersFalse; setJoinUs(true); } } state={joinUs}/>
+            <div className="overflow-hidden w-[100vw]">
+                <div className="flex flex-row gap-2 sm:gap-5 lg:px-20 overflow-x-auto">
+                    <ButtonPill text="Join Us" className="ml-auto" color="blue" onClick={() => { setOthersFalse; setJoinUs(true); } } state={joinUs}/>
                     <ButtonPill text="Join Us - Doctors" color="blue" onClick={() => { setOthersFalse; setJoinUsDoctors(true); } } state={joinUsDoctors}/>
-                    <ButtonPill text="Contact Us" color="blue" onClick={() => { setOthersFalse; setContactUs(true); } } state={contactUs}/>
+                    <ButtonPill text="Contact Us" className="mr-auto" color="blue" onClick={() => { setOthersFalse; setContactUs(true); } } state={contactUs}/>
                 </div>
                 <SubContactUs/>
             </div> 
