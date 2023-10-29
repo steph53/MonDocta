@@ -44,8 +44,8 @@ const FeatureCarousel = () => {
           <div ref={container} className=" overflow-hidden h-fit lg:h-[500vh] services">
               <div className="flex lg:flex-row flex-col w-[600vw] overflow-scroll" ref={carouselRef}>
                   <div className=" lg:w-[100vw] lg:h-[93vh]  flex lg:flex-row flex-col justify-between">
-                    <CarouselComponent image={"/africa.webp"} icon={""} title={"Preventive Healthcare"} description={"Don&apos;t wait until you&apos;re sick to seek help! Our mission is to shift the paradigm form reactive to proactive healthcare. Regular check-ups and early intervention can prevent illness and lead to longer and, healthier life."}/>
-                    <CarouselComponent image={"/radiologist.jpg"} icon={""} title={"Support for the ill"} description={"For those facing health challenges, you are not alone. MonDocta stands with you, offering support, guidance, and access to medical professionals. Together, we&apos;ll navigate the path to recovery and improved quality of life."}/>
+                    <CarouselComponent image={"/africa.webp"} icon={""} title={"Preventive Healthcare"} description={`Don't wait until you're sick to seek help! Our mission is to shift the paradigm form reactive to proactive healthcare. Regular check-ups and early intervention can prevent illness and lead to longer and, healthier life.`}/>
+                    <CarouselComponent image={"/radiologist.jpg"} icon={""} title={"Support for the ill"} description={"For those facing health challenges, you are not alone. MonDocta stands with you, offering support, guidance, and access to medical professionals. Together, we'll navigate the path to recovery and improved quality of life."}/>
                     
                   </div>
                   <div className=" lg:w-[100vw] lg:h-[93vh]  flex lg:flex-row flex-col justify-between">
@@ -55,7 +55,7 @@ const FeatureCarousel = () => {
                   </div>
                   <div className="lg:w-[100vw] lg:h-[93vh] flex lg:flex-row flex-col justify-between">
                     <CarouselComponent image={"/depression.jpg"} icon={""} title={"Managing stress and depression"} description={"Mental health matters. MonDocta is dedicated to breaking the stigma around mental health issues. Our support services and resources can help you manage stress, combat depression, and embrace a happier, more balanced life."}/>
-                    <CarouselComponent image={"/chronic.jpg"} icon={""} title={"Chronic illness support"} description={"If you or a loved one are living with a chronic illness, we&apos;re here for you. MonDocta offers specialized care and resources to help you manage your condition and improve your quality of life."}/>
+                    <CarouselComponent image={"/chronic.jpg"} icon={""} title={"Chronic illness support"} description={"If you or a loved one are living with a chronic illness, we're here for you. MonDocta offers specialized care and resources to help you manage your condition and improve your quality of life."}/>
                   </div>
               </div>
           </div>

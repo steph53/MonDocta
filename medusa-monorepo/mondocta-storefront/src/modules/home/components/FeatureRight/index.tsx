@@ -77,7 +77,7 @@ const FeatureRight: React.FC<FeatureRightProps> = ({
                         }
                     });
                     tl.to(imageRef2.current,{
-                        y: -50,
+                        y: -30,
                         scrollTrigger: {
                             trigger: imageRef2.current,
                             start: "top 70%",

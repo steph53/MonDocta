@@ -124,7 +124,9 @@
   background-position: 40% ;
 }
 
-
+.nav-gradient {
+  background-image: linear-gradient(#ffffff00 12.5%, rgba(255, 255, 255, 0));
+}
 
 /*--------------------------------------------------------------
 # Services

@@ -11,35 +11,56 @@ import JoinUsPoint from "./components/JoinUsPoint";
 
 const JoinUs = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const joinUsRef = useRef<HTMLDivElement>(null);
+
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         const blue = gsap.context(() => {
-        gsap.fromTo(".box", {
-            backgroundColor:"#ffffff",
-            
-        },{
-            backgroundColor:"#badaf7",
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top top",
-                end: "top -40%",
-                scrub: true,
-                invalidateOnRefresh: true,
-                },
-                duration: 1,
+            gsap.fromTo(".box", {
+                backgroundColor:"#ffffff",
+                
+            },{
+                backgroundColor:"#badaf7",
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top top",
+                    end: "top -40%",
+                    scrub: true,
+                    invalidateOnRefresh: true,
+                    },
+                    duration: 1,
+            });
+            let mm = gsap.matchMedia();
+            mm.add("(max-width: 1024px)", () => {
+                let scrollTween = gsap.fromTo(joinUsRef.current,{
+                    y: 0,
+                },{
+                    y: -80,
+                    scrollTrigger: {
+                        trigger: joinUsRef.current,
+                        start: "top 70%",
+                        scrub: true,
+                        invalidateOnRefresh: true,
+                    }
+                });
+            },containerRef);       
         });
-    });
-    return() => blue.revert();
+        return() => blue.revert();
     },[]);
     return (
         <div ref={containerRef} className=" box h-fit lg:h-fit ">
             <Container>
                 <Spacer height="l"/>
                 <div  className="flex  lg:flex-row flex-col justify-between gap-8">
-                    <div className="lg:sticky lg:top-48 h-fit">
+                    <div className="block sm:hidden">
+                        <Spacer height="l"/>
+                        <Spacer height="l"/>
+                        <Spacer height="l"/>
+                    </div>
+                    <div ref={joinUsRef} className="lg:sticky lg:top-48 h-fit">
                         <h1 className="text-3xl lg:text-8xl lg:w-[50vw]">Are you a medical personnel?, Join <span className="text-[#074668]">MonDocta:</span> Together, lets save lives and prevent diseases!</h1>
                     </div>
-                    <div className=" flex flex-col jusitfy-between lg:w-[50vw] justify-around lg:gap-32 gap-6">
+                    <div className=" flex flex-col jusitfy-between lg:w-[50vw] justify-around lg:gap-32 gap-10">
                         <div className="hidden lg:block">
                             <Spacer height="l"/>
                         </div>
