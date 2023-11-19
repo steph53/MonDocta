@@ -47,7 +47,7 @@ const FeaturesContainer = () => {
                 <Spacer/>
                 <FeatureRight title={"For Children:"} description={"Every child deserves a healthy and happy start life. MonDocta is here to provide pediatric care that&apos;s centered around your child&apos;s well-being. From routine check-ups to vaccinations, we&apos;re commited to keeping your little ones smiling and thriving."} image={""} />
                 <Spacer/>
-                <FeatureLeft title={"Health Education:"} description={"At MonDocta, we celebrate the beauty of motherhood and are dedicated to ensuring that your journey towards motherhood is filled with care, support, and the best possible medical attention. Our prenatal care programs are designed to nurture both you and your baby, ensuring a safe and joyful pregnancy."} image={""} />
+                <FeatureLeft title={"Health Education:"} description={"Welcome to MonDocta's Health Education program! Our comprehensive program covers a wide range of topics to promote good health and well-being. ​​We start with the basics in Introduction to Health and Hygiene, emphasizing the importance of personal hygiene practices such as hand washing and teeth brushing. We also highlight the significance of a balanced diet for overall health."} image={""} />
                 <Spacer/>
             </div>
       </>

@@ -49,7 +49,7 @@ const WhyUsPoint: React.FC<WhyUsPointProps> = ({
     },[]);
     return ( 
             <div ref={TextRef} className="flex flex-col gap-16 sm:justify-around lg:justify-normal lg:flex-row mx-8 h-[90vh] opacity-0">
-                <div className="flex flex-col lg:h-full sm:justify-between pt-8 sm:pt-4  sm:gap-8 md:gap-10">
+                <div className="flex flex-col lg:h-full lg:pt-10 sm:justify-between pt-8 sm:pt-4  sm:gap-8 md:gap-10">
                     <h1 className="hidden sm:block text-3xl sm:text-5xl lg:text-7xl ">{number}</h1>
                     <h2 className="max-w-[90%] lg:pb-28 ml-2 text-2xl sm:text-3xl md:text-5xl lg:text-8xl">{title}</h2>
                 </div>
