@@ -13,12 +13,12 @@ const FeaturedProducts = () => {
       <div className="content-container py-12">
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-base-regular text-gray-600 mb-6">
-            Latest products
+            Medicine for all
           </span>
           <p className="text-2xl-regular text-gray-900 max-w-lg mb-4">
-            Our newest styles are here to help you look your best.
+            With our online drug store you can get your drugs from the comfort of your home.
           </p>
-          <UnderlineLink href="/store">Explore products</UnderlineLink>
+          <UnderlineLink href="/store">Explore our store</UnderlineLink>
         </div>
         <ul className="grid grid-cols-2 small:grid-cols-4 gap-x-4 gap-y-8">
           {data

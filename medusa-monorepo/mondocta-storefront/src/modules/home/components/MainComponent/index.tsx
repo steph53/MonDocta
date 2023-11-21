@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import FeatureCarousel from "../FeatureCarousel";
 import FeaturesContainer from "../FeaturesContainer";
+import FeaturedProducts from "../featured-products";
 import JoinUs from "../JoinUs";
 import Hero from "../hero";
 import WhyUs from "../why-us";
@@ -75,6 +76,9 @@ const MainComponent = () => {
             </div>
             <div ref={carouselRef}>
                 <FeatureCarousel />
+            </div>
+            <div>
+                <FeaturedProducts />
             </div>
             <div ref={joinUsRef2}>
                 <JoinUs />

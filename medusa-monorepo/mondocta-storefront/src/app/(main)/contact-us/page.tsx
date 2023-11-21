@@ -5,6 +5,9 @@ import ButtonPill from "./components/ButtonPill";
 import { useState } from "react";
 import JoinContact from "./templates/JoinContact";
 import DoctorContact from "./templates/DoctorContact";
+import localFont from "next/font/local";
+
+const myFont = localFont({src: "../../fonts/Articulat/ArticulatCF-Normal.otf", display: "swap"})
 
 const ContactUs = () => {
     const [joinUs, setJoinUs] = useState(false);
@@ -55,10 +58,12 @@ const ContactUs = () => {
             </div> 
         );
     }
-    return ( 
-        <div className="mt-20">
-            {bodyContent}
-        </div> 
+    return (
+        <main className={myFont.className}>
+            <div className="mt-20">
+                {bodyContent}
+            </div> 
+        </main> 
     );
     
 }

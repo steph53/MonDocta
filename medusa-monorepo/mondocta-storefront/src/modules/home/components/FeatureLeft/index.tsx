@@ -47,7 +47,7 @@ const FeatureLeft: React.FC<FeatureLeftProps> = ({
                         y: -150,
                         scrollTrigger: {
                             trigger: imageRef.current,
-                            start: "top top",
+                            start: "top 80",
                             end: "bottom top",
                             scrub: true,
                             invalidateOnRefresh: true,
@@ -114,13 +114,13 @@ const FeatureLeft: React.FC<FeatureLeftProps> = ({
             </div>
             <div className="w-[90vw] lg:w-[50vw] lg:h-[80%] flex flex-col m-auto lg:m-0 items-center">
                 <div className="h-fit lg:h-full w-full flex flex-col justify-end  lg:items-start lg:pl-10">
-                    <h1 className="text-3xl text-[#074668] lg:text-8xl mb-4">
+                    <h1 className="text-3xl text-[#074668] lg:text-6xl mb-4">
                         {title}
                     </h1>
                     <div className="hidden lg:block">
                         <Spacer />
                     </div>
-                    <div className="text-2xl  text-[#074668] lg:max-w-[32rem]">
+                    <div className="text-2xl  text-[#074668] lg:max-w-[48rem]">
                         {description}
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import JoinUsPoint from "./components/JoinUsPoint";
+import Link from "next/link";
 
 
 const JoinUs = () => {
@@ -71,9 +72,9 @@ const JoinUs = () => {
                         <div className="gap-5 flex flex-col">
                             <p  className=" lg:max-w-[40vw]  lg:text-2xl"> Joining MonDocta is an opportunity to give deeper meaning to your medical career, touch lives in an unforgettable way, and contribute to a healthier, brighter future.</p>
                         </div>
-                        <a className="p-3 bg-[#074668] rounded-full text-white text-xl flex justify-between w-fit gap-3 group/arrow ml-2 px-4" href="#" > 
+                        <Link className="p-3 bg-[#074668] rounded-full text-white text-xl flex justify-between w-fit gap-3 group/arrow ml-2 px-4" href="/contact-us" > 
                                 Join Us <BsArrowRight className="text-2xl text-white group-hover/arrow:translate-x-2 group-hover/arrow:scale-[1.1] duration-700 mr-1" />
-                        </a>
+                        </Link>
                     </div>
                 </div> 
                 <Spacer height="l"/>
