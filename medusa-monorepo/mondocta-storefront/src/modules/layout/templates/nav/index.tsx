@@ -90,7 +90,7 @@ const Nav = () => {
               <LinkNav link="/" text="Home" />
               <LinkNav link="/contact-us" text="Contact Us" />
               <LinkNav link="/" text="About" />
-              {/*<Link href="/account">Account</Link>*/}
+              <LinkNav link="/account" text="Account"/>
             </div>
             {/*<CartDropdown />*/}
           </div>

@@ -30,16 +30,18 @@ const Hero = () => {
           });
         */}
         var tl = gsap.timeline({});
-        tl.fromTo(mainTextRef.current,{
+        tl.fromTo(".hero",{
           opacity: 0,
         },{
             opacity: 1,
             y: -50, 
-            duration: 1
+            duration: 1,
+            stagger: 0.5,
         });
         tl.fromTo(textRef.current,{ 
             opacity: 0
         },{ 
+
             opacity:1, y: -50, 
             duration: 0.5
         });
@@ -50,11 +52,12 @@ const Hero = () => {
    return (
     <div className="h-[100vh] w-full relative">
       <div className="text-white absolute inset-0 z-10 flex flex-col justify-center items-center text-center  backdrop-blur-sm">
-        <h1 className="text-4xl lg:text-8xl mb-4 drop-shadow-md shadow-black opacity-0" ref={mainTextRef}>
-          Welcome to <br/> MonDocta Association
+        <h1 className="text-4xl lg:text-8xl mb-4 drop-shadow-md shadow-black">
+          <div className="opacity-0 hero"  ref={mainTextRef}>Welcome to</div>
+          <div className="opacity-0 hero" ref={mainTextRef} >MonDocta Association</div> 
         </h1>
         <p className="text-xl max-w-[32rem] mb-6 drop-shadow-md shadow-black opacity-0" ref={textRef}>
-          Your Path to a Healthier tomorrow!
+          Bridging access to healthcare for a better tomorrow!
         </p>
         <div className="rounded-full border bg-[#1977cc] lg:bg-transparent border-[#1977cc] lg:border-white group/cta  hover:bg-[#1977cc]  hover:border-[#1977cc] duration-700 p-4 cursor-pointer" >
           <Link href="/">Book an appointment 

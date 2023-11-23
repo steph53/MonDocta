@@ -35,7 +35,7 @@ const FeaturesContainer = () => {
                 <div className="section-title">
                     <h2 className=" text-3xl lg:text-6xl">Our Services</h2>
                     <div>&nbsp;</div>
-                    <p className="text-3xl">Whether it&apos;s nursing care, kinesitherapy, home support services or palliative care, our team is here to meet your needs in a professional and caring way. MonDocta offers a range of healthcare services.
+                    <p className="text-2xl lg:text-3xl">Whether it&apos;s nursing care, kinesitherapy, home support services or palliative care, our team is here to meet your needs in a professional and caring way. MonDocta offers a range of healthcare services.
                     </p>
                 </div>
             </Container>

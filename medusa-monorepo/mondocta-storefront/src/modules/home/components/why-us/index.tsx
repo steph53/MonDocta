@@ -54,10 +54,18 @@ const WhyUs = () => {
                     <div  className="pinned-container bg-[#badaf7] flex flex-col sm:m-10 mx-5 gap-28  rounded-xl h-[90vh] overflow-hidden">                        
                         <div ref={TextRef} className="flex flex-col h-[180vh]  ">
                             <div className=" section h-[90vh]">
-                                <WhyUsPoint title="Combating Healthcare Access Inequalities" description="The MonDocta association was created with a noble aim: to tackle the glaring disparities in access to healthcare that affect many regions. We know that unequal access to medical services leads to higher mortality rates, particularly in disadvantaged communities." number={"01"}/>
+                                <WhyUsPoint 
+                                    title="Combating Healthcare Access Inequalities" description="The MonDocta association was created with a noble aim: to tackle the glaring disparities in access to healthcare that affect many regions. We know that unequal access to medical services leads to higher mortality rates, particularly in disadvantaged communities." 
+                                    number={"01"} 
+                                    point1="The probability of dying between the exact ages of 15 and 50 in cameroon is estimated at 155 ‰ for women and 185 ‰"    
+                                />
                             </div>
                             <div className="section h-[90vh]">
-                                <WhyUsPoint title="Prevent Diseases through Education:" description="One of MonDocta&apos;s main raisons d&apos;être is to tackle the prevalence of preventable diseases. These diseases and conditions can be effectively managed, or even prevented, through timely medical intervention. By providing education, early detection and necessary care, MonDocta aims to reduce preventable deaths and save lives." number={"02"}/>
+                                <WhyUsPoint 
+                                    title="Prevent Diseases through Education:" description="One of MonDocta&apos;s main raisons d&apos;être is to tackle the prevalence of preventable diseases. These diseases and conditions can be effectively managed, or even prevented, through timely medical intervention. By providing education, early detection and necessary care, MonDocta aims to reduce preventable deaths and save lives." 
+                                    number={"02"}
+                                    point1="According to the WHO, about 11,000 people die from Malaria in cameroon every year."    
+                                />
                             </div>
                             <div className="section h-[90vh]">                            
                                 <WhyUsPoint title="Bridging Healthcare Gaps and Fostering Early Intervention:" description="Another crucial aspect of MonDocta&apos;s work is its medical outreach program. By actively reaching out to communities, MonDocta brings healthcare services closer to those who need them most. This approach not only identifies health problems at an early stage, but also provides essential care, reducing the burden of untreated illness." number={"03"}/>

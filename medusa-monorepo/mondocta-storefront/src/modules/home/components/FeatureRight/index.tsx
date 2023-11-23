@@ -98,7 +98,7 @@ const FeatureRight: React.FC<FeatureRightProps> = ({
         }
     },[]);
     return ( 
-        <div className="h-[100vh] w-[95vw] m-auto flex flex-col lg:flex-row">
+        <div className="h-[100vh] w-[95vw] lg:m-auto flex flex-col lg:flex-row">
             <div className=" hidden w-[90vw] lg:w-[50vw] lg:h-[80%] lg:flex lg:flex-col m-auto lg:m-0 items-center">
                 <div className="h-fit lg:h-full w-full flex flex-col justify-end  lg:items-start lg:ml-10">
                     <h1 className="text-3xl text-[#074668] lg:text-6xl mb-4">
